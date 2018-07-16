@@ -52,7 +52,8 @@ spec:
       serviceAccountName: fluentd
       volumes:
       - name: pos-files
-        emptyDir: {}
+        hostPath:
+          path: /var/log/pos/
       - name: host-logs
         hostPath:
           path: /var/log/
