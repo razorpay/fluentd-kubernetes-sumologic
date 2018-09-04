@@ -29,9 +29,12 @@ RUN mkdir -p /fluentd/conf.d && \
     mkdir -p /fluentd/plugins
 
 # Default settings
+ENV LOG_LEVEL "info"
 ENV LOG_FORMAT "json"
-ENV FLUSH_INTERVAL "5s"
-ENV NUM_THREADS "1"
+ENV FLUSH_INTERVAL "1s"
+ENV FLUSH_THREAD_COUNT "4"
+ENV FLUSH_MODE "interval"
+ENV NUM_THREADS "4"
 ENV SOURCE_CATEGORY "%{namespace}/%{pod_name}"
 ENV SOURCE_CATEGORY_PREFIX "kubernetes/"
 ENV SOURCE_CATEGORY_REPLACE_DASH "/"
