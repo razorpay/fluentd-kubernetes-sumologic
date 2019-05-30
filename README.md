@@ -1,3 +1,8 @@
+This repo has been moved to [razorpay/opscontainers:fluentd-ds](https://github.com/razorpay/opscontainers/tree/fluentd-ds).
+
+
+---
+
 This page describes the Sumo Kubernetes [Fluentd](http://www.fluentd.org/) plugin.
 
 ## Support
